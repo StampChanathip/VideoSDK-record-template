@@ -22,7 +22,7 @@ export default function App() {
     return paramKeys;
   }, []);
 
-  return meetingId && token && participantId ? (
+  return meetingId && token ? (
     <div>
       <MeetingProvider
         config={{
