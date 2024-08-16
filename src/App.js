@@ -3,7 +3,7 @@ import { MeetingProvider } from "@videosdk.live/react-sdk";
 import { MeetingContainer } from "./components/MeetingContainer";
 
 export default function App() {
-  const { meetingId, token, participantId } = useMemo(() => {
+  const { meetingId, token} = useMemo(() => {
     const location = window.location;
 
     const urlParams = new URLSearchParams(location.search);
@@ -11,7 +11,6 @@ export default function App() {
     const paramKeys = {
       meetingId: "meetingId",
       token: "token",
-      participantId: "participantId",
     };
 
     Object.keys(paramKeys).forEach((key) => {
@@ -31,7 +30,6 @@ export default function App() {
           micEnabled: false,
           webcamEnabled: false,
           name: "recorder",
-          participantId,
         }}
         token={token}
         joinWithoutUserInteraction
